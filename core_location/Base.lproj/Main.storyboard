@@ -18,13 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OHr-Z3-bK9">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OHr-Z3-bK9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
                             </mapView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dcE-1t-sq9">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcE-1t-sq9">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2Jb-A3-VBp"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem title="Start" id="eaD-uR-ZjK">
                                         <connections>
@@ -41,11 +42,24 @@
                                             <action selector="zoomOut:" destination="BYZ-38-t0r" id="UCo-dI-Ddl"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Clear" id="F2K-fS-Hhu"/>
+                                    <barButtonItem title="Clear" id="F2K-fS-Hhu">
+                                        <connections>
+                                            <action selector="clearButtonPressed:" destination="BYZ-38-t0r" id="gpm-MU-ihY"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dcE-1t-sq9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="74h-rd-A2t"/>
+                            <constraint firstItem="dcE-1t-sq9" firstAttribute="top" secondItem="OHr-Z3-bK9" secondAttribute="bottom" id="7uI-WR-bZn"/>
+                            <constraint firstItem="dcE-1t-sq9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AfN-7k-VvG"/>
+                            <constraint firstItem="OHr-Z3-bK9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DDF-C7-46E"/>
+                            <constraint firstItem="OHr-Z3-bK9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VPx-p9-tzs"/>
+                            <constraint firstItem="dcE-1t-sq9" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="uEY-zs-WHs"/>
+                            <constraint firstItem="OHr-Z3-bK9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="z1D-mP-lqH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="7KM-WZ-WXx"/>
